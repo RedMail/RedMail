@@ -1,0 +1,85 @@
+#!/usr/bin/env node
+/**
+ *  引入依赖的模块 .
+ */
+import './mongodb'
+import app   from '../app';
+import debug from 'debug'
+import http  from 'http'
+
+const server = http.createServer(app.callback());
+/**
+ *  获取环境参数
+ */
+const PORT = process.env.PORT || process.env.p
+
+const port = normalizePort(PORT || '41893');
+
+/**
+ *  监听端口 默认 3000
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ *  处理端口参数
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * 错误处理
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' 需要提升权限');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' 已经在使用了');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * 监听处理
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  console.log('监听:' + bind +' ok')
+  debug('tjcu-site-backend:server')('监听 ' + bind +'ok');
+}

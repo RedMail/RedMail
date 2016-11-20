@@ -1,0 +1,38 @@
+{
+    "devDependencies": {
+        "babel-core": "^6.18.2",
+        "babel-eslint": "^7.1.1",
+        "babel-polyfill": "^6.16.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-stage-0": "^6.16.0",
+        "babel-register": "^6.18.0",
+        "eslint": "^3.10.2",
+        "gulp": "^3.9.1",
+        "gulp-eslint": "^3.0.1",
+        "pre-commit": "^1.1.3"
+    },
+    "dependencies": {
+        "mailparser": "^0.6.1",
+        "moment": "^2.16.0",
+        "mongoose": "^4.6.8",
+        "nodemailer": "^2.6.4",
+        "smtp-protocol": "^2.4.7",
+        "smtp-server": "^1.16.1"
+    },
+    "name": "RedMail",
+    "version": "1.0.0",
+    "main": "app.js",
+    "repository": {
+        "url": "https://github.com/RedMail/RedMail.git",
+        "type": "git"
+    },
+    "author": "NoBey <786964300@qq.com>",
+    "license": "MIT",
+    "scripts": {
+        "lint": "gulp lint",
+        "start": "node ./bin/es6"
+    },
+    "pre-commit": [
+        "lint"
+    ]
+}
