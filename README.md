@@ -11,6 +11,9 @@
 
 - 配置信息 模块
 - 工具类
+
+![plan](./RedMail-plan.png)
+
 ---
 
 # web端 界面

@@ -6,10 +6,10 @@ mailparser.on("end", function(mail_object){
   console.log(mail_object)
 })
 
-var server = smtp.createServer(function(req) { 
+var server = smtp.createServer(function(req) {
   req.on('greeting', function(to, ack) {   
     console.log(to)  // 这里是刚才的 helo 之后的回调  
-          ack.accept();
+    ack.accept();
   });
 
   req.on('from', function(to, ack) {  

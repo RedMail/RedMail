@@ -20,7 +20,7 @@
         "smtp-server": "^1.16.1"
     },
     "name": "RedMail",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "main": "app.js",
     "repository": {
         "url": "https://github.com/RedMail/RedMail.git",
