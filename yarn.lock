@@ -91,6 +91,10 @@ arrify@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/arrify/download/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
+assert-plus@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
+
 async@2.1.2:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/async/download/async-2.1.2.tgz#612a4ab45ef42a70cde806bad86ee6db047e8385"
@@ -729,6 +733,10 @@ beeper@^1.0.0:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/beeper/download/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
 
+"binaryheap@>= 0.0.3":
+  version "0.0.3"
+  resolved "http://registry.npm.taobao.org/binaryheap/download/binaryheap-0.0.3.tgz#0d6136c84e9f1a5a90c0b97178c3e00df59820d6"
+
 bluebird@2.10.2:
   version "2.10.2"
   resolved "http://registry.npm.taobao.org/bluebird/download/bluebird-2.10.2.tgz#024a5517295308857f14f91f1106fc3b555f446b"
@@ -755,6 +763,12 @@ bson@~0.5.4, bson@~0.5.6:
 buffer-shims@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/buffer-shims/download/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
+
+"buffercursor@>= 0.0.12":
+  version "0.0.12"
+  resolved "http://registry.npm.taobao.org/buffercursor/download/buffercursor-0.0.12.tgz#78a9a7f4343ae7d820a8999acc80de591e25a779"
+  dependencies:
+    verror "^1.4.0"
 
 bufferstreams@^1.1.1:
   version "1.1.1"
@@ -862,7 +876,7 @@ core-js@^2.4.0:
   version "2.4.1"
   resolved "http://registry.npm.taobao.org/core-js/download/core-js-2.4.1.tgz#4de911e667b0eae9124e34254b53aea6fc618d3e"
 
-core-util-is@~1.0.0:
+core-util-is@~1.0.0, core-util-is@1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
@@ -1164,6 +1178,10 @@ extglob@^0.3.1:
   resolved "http://registry.npm.taobao.org/extglob/download/extglob-0.3.2.tgz#2e18ff3d2f49ab2765cec9023f011daa8d8349a1"
   dependencies:
     is-extglob "^1.0.0"
+
+extsprintf@^1.2.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/extsprintf/download/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
 
 fancy-log@^1.1.0:
   version "1.2.0"
@@ -1576,6 +1594,14 @@ ip@^1.1.2:
   version "1.1.4"
   resolved "http://registry.npm.taobao.org/ip/download/ip-1.1.4.tgz#de8247ffef940451832550fba284945e6e039bfb"
 
+"ipaddr.js@>= 0.1.1":
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/ipaddr.js/download/ipaddr.js-1.2.0.tgz#8aba49c9192799585bdd643e0ccb50e8ae777ba4"
+
+ipaddr.js@~0.1.3:
+  version "0.1.9"
+  resolved "http://registry.npm.taobao.org/ipaddr.js/download/ipaddr.js-0.1.9.tgz#a9c78ccc12dc9010f296ab9aef2f61f432d69efa"
+
 ipv6-normalize@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/ipv6-normalize/download/ipv6-normalize-1.0.1.tgz#1b3258290d365fa83239e89907dde4592e7620a8"
@@ -1965,6 +1991,12 @@ lru-cache@2:
   version "2.7.3"
   resolved "http://registry.npm.taobao.org/lru-cache/download/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
 
+mail:
+  version "0.2.3"
+  resolved "http://registry.npm.taobao.org/mail/download/mail-0.2.3.tgz#1eddfe74bb38d7ebff6211aa903ba6beaf96ec24"
+  dependencies:
+    reparse ">= 0.1.2"
+
 mailcomposer@3.12.0:
   version "3.12.0"
   resolved "http://registry.npm.taobao.org/mailcomposer/download/mailcomposer-3.12.0.tgz#9c5e1188aa8e1c62ec8b86bd43468102b639e8f9"
@@ -2141,6 +2173,28 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "http://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
+native-dns:
+  version "0.7.0"
+  resolved "http://registry.npm.taobao.org/native-dns/download/native-dns-0.7.0.tgz#df418636f08fb29e8fcb7ef142c822a1588ba5b7"
+  dependencies:
+    ipaddr.js "~0.1.3"
+    native-dns-cache "~0.0.2"
+    native-dns-packet "~0.1.1"
+
+native-dns-cache@~0.0.2:
+  version "0.0.2"
+  resolved "http://registry.npm.taobao.org/native-dns-cache/download/native-dns-cache-0.0.2.tgz#ce0998f7fdf6c7990970a33190624b0e98ee959b"
+  dependencies:
+    binaryheap ">= 0.0.3"
+    native-dns-packet ">= 0.0.1"
+
+"native-dns-packet@>= 0.0.1", native-dns-packet@~0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/native-dns-packet/download/native-dns-packet-0.1.1.tgz#97da90570b8438a00194701ce24d011fd3cc109a"
+  dependencies:
+    buffercursor ">= 0.0.12"
+    ipaddr.js ">= 0.1.1"
+
 natives@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/natives/download/natives-1.1.0.tgz#e9ff841418a6b2ec7a495e939984f78f163e6e31"
@@ -2161,7 +2215,7 @@ nodemailer:
     nodemailer-smtp-transport "2.7.2"
     socks "1.1.9"
 
-nodemailer-direct-transport@3.3.2:
+nodemailer-direct-transport, nodemailer-direct-transport@3.3.2:
   version "3.3.2"
   resolved "http://registry.npm.taobao.org/nodemailer-direct-transport/download/nodemailer-direct-transport-3.3.2.tgz#e96fafb90358560947e569017d97e60738a50a86"
   dependencies:
@@ -2193,6 +2247,10 @@ nodemailer-smtp-transport@2.7.2:
     nodemailer-shared "1.1.0"
     nodemailer-wellknown "0.1.10"
     smtp-connection "2.12.0"
+
+nodemailer-wellknown:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/nodemailer-wellknown/download/nodemailer-wellknown-0.2.0.tgz#ba986b830d3f60b3ab41b8b71600a4dfd05afce3"
 
 nodemailer-wellknown@0.1.10:
   version "0.1.10"
@@ -2528,6 +2586,10 @@ regjsparser@^0.1.4:
   resolved "http://registry.npm.taobao.org/regjsparser/download/regjsparser-0.1.5.tgz#7ee8f84dc6fa792d3fd0ae228d24bd949ead205c"
   dependencies:
     jsesc "~0.5.0"
+
+"reparse@>= 0.1.2":
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/reparse/download/reparse-0.1.2.tgz#2d1fa585f5810d346cf3277a910a60efb5655c66"
 
 repeat-element@^1.1.2:
   version "1.1.2"
@@ -2906,6 +2968,14 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
+
+verror@^1.4.0:
+  version "1.9.0"
+  resolved "http://registry.npm.taobao.org/verror/download/verror-1.9.0.tgz#107a8a2d14c33586fc4bb830057cd2d19ae2a6ee"
+  dependencies:
+    assert-plus "^1.0.0"
+    core-util-is "1.0.2"
+    extsprintf "^1.2.0"
 
 vinyl-fs@^0.3.0:
   version "0.3.14"

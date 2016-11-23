@@ -13,7 +13,7 @@ const server = app;
  */
 const PORT = process.env.PORT || process.env.p
 
-const port = normalizePort(PORT || '9090');
+const port = normalizePort(PORT || '25');
 
 /**
  *  监听端口 默认 3000

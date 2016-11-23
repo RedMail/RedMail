@@ -12,6 +12,8 @@
 - 配置信息 模块
 - 工具类
 
+- spf 验证
+
 ![plan](./RedMail-plan.png)
 
 ---

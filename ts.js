@@ -1,9 +1,11 @@
 var smtp = require('smtp-protocol'); 
-var MailParser = require("mailparser").MailParser;
+import { MailParser } from 'mailparser'
 var mailparser = new MailParser();
+var concat = require('concat-stream');
+var data = ''
 
 mailparser.on("end", function(mail_object){
-  console.log(mail_object)
+  // console.log(mail_object)
 })
 
 var server = smtp.createServer(function(req) {
@@ -30,6 +32,7 @@ var server = smtp.createServer(function(req) {
     stream.pipe(mailparser);  // 利用process.stdout打开了双向的数据传输通道
     ack.accept();   
   });
+  
 });
 
 
