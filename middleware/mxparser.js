@@ -13,7 +13,7 @@ export default (mx) => {
     },
     timeout: 1000,
   })
-  
+
   req.on('timeout', () => console.log('DNS Timeout 超时'))
   req.on('end', () => {})
   req.send()

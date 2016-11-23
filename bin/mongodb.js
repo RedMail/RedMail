@@ -1,7 +1,7 @@
 var connectionString, db, mongoose, options;
 mongoose = require('mongoose');
 // mongoose.Promise = require('bluebird');
- mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 import config  from  '../config/mongodb.js';
 var port     = config.port;
 var db       = config.db;
