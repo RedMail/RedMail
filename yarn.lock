@@ -1529,6 +1529,12 @@ iconv-lite@~0.4.13, iconv-lite@0.4.13:
   version "0.4.13"
   resolved "http://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
 
+iconv@*:
+  version "2.2.1"
+  resolved "http://registry.npm.taobao.org/iconv/download/iconv-2.2.1.tgz#39b13fdd98987d26aef26c0a2f2a900911fa4584"
+  dependencies:
+    nan "^2.3.5"
+
 ignore@^3.2.0:
   version "3.2.0"
   resolved "http://registry.npm.taobao.org/ignore/download/ignore-3.2.0.tgz#8d88f03c3002a0ac52114db25d2c673b0bf1e435"
@@ -2173,6 +2179,10 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "http://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
+nan@^2.3.5:
+  version "2.4.0"
+  resolved "http://registry.npm.taobao.org/nan/download/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
+
 native-dns:
   version "0.7.0"
   resolved "http://registry.npm.taobao.org/native-dns/download/native-dns-0.7.0.tgz#df418636f08fb29e8fcb7ef142c822a1588ba5b7"
@@ -2202,6 +2212,10 @@ natives@^1.1.0:
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
+
+node-markdown@*:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/node-markdown/download/node-markdown-0.1.1.tgz#e365baba38d4ac56d8563dd69ca6d7215b08fb94"
 
 nodemailer:
   version "2.6.4"
@@ -2418,6 +2432,13 @@ pinkie@^2.0.0:
 pluralize@^1.2.1:
   version "1.2.1"
   resolved "http://registry.npm.taobao.org/pluralize/download/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
+
+pop3-n3:
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/pop3-n3/download/pop3-n3-0.1.2.tgz#3fe17f52b2fb717eefab80f2220b3d22588fad51"
+  dependencies:
+    iconv "*"
+    node-markdown "*"
 
 pre-commit:
   version "1.1.3"

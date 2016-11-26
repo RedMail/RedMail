@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
+import mongoose from 'mongoose'
+const Schema = mongoose.Schema;
 /*
  *
  ** @subject     {String}      标题
@@ -45,8 +45,8 @@ const EmailSchema = new Schema({
   }
 })
 
+EmailSchema.plugin(require('../plugins/common.js'))
 
+const Email = mongoose.model('Email', EmailSchema)
 
-EmailSchema.plugin(require('../plugins/common.js'));
-const User = mongoose.model('Email', EmailSchema);
-export default Email;
+export default Email

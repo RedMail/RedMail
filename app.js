@@ -6,9 +6,10 @@ import emaildb from './model/email'
 
 // 创建stmp服务器
 const server = smtp.createServer(req => {
+
   accept(req, concat(async(mailData) => {
     const data = await parser(mailData)
-    await emaildb.create({
+    emaildb.create({
       subject: data.subject,
       text: data.text,
       html: data.html,

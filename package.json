@@ -20,6 +20,7 @@
         "nodemailer": "^2.6.4",
         "nodemailer-direct-transport": "^3.3.2",
         "nodemailer-wellknown": "^0.2.0",
+        "pop3-n3": "^0.1.2",
         "smtp-protocol": "^2.4.7",
         "smtp-server": "^1.16.1"
     },
