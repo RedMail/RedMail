@@ -25,7 +25,7 @@ MessageStore.prototype.addMessage = function(message){
 
     message.size = this.buildMimeMail(message).length;
     this.messages.push(message);
-    console.log(message)
+    // console.log(message)
     this.length++;
     this.size += message.size;
 };
