@@ -1608,10 +1608,6 @@ ipaddr.js@~0.1.3:
   version "0.1.9"
   resolved "http://registry.npm.taobao.org/ipaddr.js/download/ipaddr.js-0.1.9.tgz#a9c78ccc12dc9010f296ab9aef2f61f432d69efa"
 
-ipv6-normalize@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/ipv6-normalize/download/ipv6-normalize-1.0.1.tgz#1b3258290d365fa83239e89907dde4592e7620a8"
-
 is-absolute@^0.2.3:
   version "0.2.6"
   resolved "http://registry.npm.taobao.org/is-absolute/download/is-absolute-0.2.6.tgz#20de69f3db942ef2d87b9c2da36f172235b1b5eb"
@@ -1997,12 +1993,6 @@ lru-cache@2:
   version "2.7.3"
   resolved "http://registry.npm.taobao.org/lru-cache/download/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
 
-mail:
-  version "0.2.3"
-  resolved "http://registry.npm.taobao.org/mail/download/mail-0.2.3.tgz#1eddfe74bb38d7ebff6211aa903ba6beaf96ec24"
-  dependencies:
-    reparse ">= 0.1.2"
-
 mailcomposer@3.12.0:
   version "3.12.0"
   resolved "http://registry.npm.taobao.org/mailcomposer/download/mailcomposer-3.12.0.tgz#9c5e1188aa8e1c62ec8b86bd43468102b639e8f9"
@@ -2240,7 +2230,7 @@ nodemailer-fetch@1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/nodemailer-fetch/download/nodemailer-fetch-1.6.0.tgz#79c4908a1c0f5f375b73fe888da9828f6dc963a4"
 
-nodemailer-shared@^1.1.0, nodemailer-shared@1.1.0:
+nodemailer-shared@1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/nodemailer-shared/download/nodemailer-shared-1.1.0.tgz#cf5994e2fd268d00f5cf0fa767a08169edb07ec0"
   dependencies:
@@ -2261,10 +2251,6 @@ nodemailer-smtp-transport@2.7.2:
     nodemailer-shared "1.1.0"
     nodemailer-wellknown "0.1.10"
     smtp-connection "2.12.0"
-
-nodemailer-wellknown:
-  version "0.2.0"
-  resolved "http://registry.npm.taobao.org/nodemailer-wellknown/download/nodemailer-wellknown-0.2.0.tgz#ba986b830d3f60b3ab41b8b71600a4dfd05afce3"
 
 nodemailer-wellknown@0.1.10:
   version "0.1.10"
@@ -2608,10 +2594,6 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-"reparse@>= 0.1.2":
-  version "0.1.2"
-  resolved "http://registry.npm.taobao.org/reparse/download/reparse-0.1.2.tgz#2d1fa585f5810d346cf3277a910a60efb5655c66"
-
 repeat-element@^1.1.2:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/repeat-element/download/repeat-element-1.1.2.tgz#ef089a178d1483baae4d93eb98b4f9e4e11d990a"
@@ -2753,13 +2735,6 @@ smtp-protocol:
     stream-combiner "~0.0.2"
     through "^2.3.4"
     through2 "^1.0.0"
-
-smtp-server:
-  version "1.16.1"
-  resolved "http://registry.npm.taobao.org/smtp-server/download/smtp-server-1.16.1.tgz#91d2dbd5e8bb9ed395b1a1774e8b60dd7b24e453"
-  dependencies:
-    ipv6-normalize "^1.0.1"
-    nodemailer-shared "^1.1.0"
 
 socks@1.1.9:
   version "1.1.9"

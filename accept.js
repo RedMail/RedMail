@@ -19,17 +19,18 @@ export default (req, callback) => {
   })
   // 邮件内容
   req.on('message', (stream, ack) => { 
-    var todomain   = req.to.split('@')[1]
-    var fromdomain = req.from.split('@')[1]
-    if(config.host.indexOf(fromdomain) === -1) {
-        stream.pipe(concat(async(mailData) => {
-          const data = await parser(mailData)
-          await send(data.to[0].address, data)
-          console.log(data)
-        }))
-        ack.accept();   
-        return
-    }
+    // var todomain   = req.to.split('@')[1]
+    // var fromdomain = req.from.split('@')[1]
+
+    // if(config.host.indexOf(fromdomain) === -1) {
+    //     stream.pipe(concat(async(mailData) => {
+    //       const data = await parser(mailData)
+    //       await send(data.to[0].address, data)
+    //       console.log(data)
+    //     }))
+    //     ack.accept();   
+    //     return
+    // }
     stream.pipe(callback);
     ack.accept();   
   });
