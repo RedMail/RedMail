@@ -1,4 +1,4 @@
 {
-  "host": ["localhost"],
+  "host": ["localhost","nobey.cn"],
   "send": "nobey"
 }

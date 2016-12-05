@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+/**
+ *  引入依赖的模块 .
+ */
+import './mongodb'
+import app   from '../app';
+
+
+const server = app;
+/**
+ *  获取环境参数
+ */
+const PORT = process.env.PORT || process.env.p
+
+const port =  '25'
+
+/**
+ *  监听端口 默认 3000
+ */
+
+server.listen(port);
+import '../pop3/pop'

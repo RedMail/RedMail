@@ -1608,6 +1608,10 @@ ipaddr.js@~0.1.3:
   version "0.1.9"
   resolved "http://registry.npm.taobao.org/ipaddr.js/download/ipaddr.js-0.1.9.tgz#a9c78ccc12dc9010f296ab9aef2f61f432d69efa"
 
+ipv6-normalize@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/ipv6-normalize/download/ipv6-normalize-1.0.1.tgz#1b3258290d365fa83239e89907dde4592e7620a8"
+
 is-absolute@^0.2.3:
   version "0.2.6"
   resolved "http://registry.npm.taobao.org/is-absolute/download/is-absolute-0.2.6.tgz#20de69f3db942ef2d87b9c2da36f172235b1b5eb"
@@ -2230,7 +2234,7 @@ nodemailer-fetch@1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/nodemailer-fetch/download/nodemailer-fetch-1.6.0.tgz#79c4908a1c0f5f375b73fe888da9828f6dc963a4"
 
-nodemailer-shared@1.1.0:
+nodemailer-shared@^1.1.0, nodemailer-shared@1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/nodemailer-shared/download/nodemailer-shared-1.1.0.tgz#cf5994e2fd268d00f5cf0fa767a08169edb07ec0"
   dependencies:
@@ -2735,6 +2739,13 @@ smtp-protocol:
     stream-combiner "~0.0.2"
     through "^2.3.4"
     through2 "^1.0.0"
+
+smtp-server:
+  version "1.16.1"
+  resolved "http://registry.npm.taobao.org/smtp-server/download/smtp-server-1.16.1.tgz#91d2dbd5e8bb9ed395b1a1774e8b60dd7b24e453"
+  dependencies:
+    ipv6-normalize "^1.0.1"
+    nodemailer-shared "^1.1.0"
 
 socks@1.1.9:
   version "1.1.9"

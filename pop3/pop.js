@@ -1,4 +1,4 @@
-var N3 = require("pop3-n3").N3,
+  var N3 = require("pop3-n3").N3,
   server_name = "RedMail";
 import '../bin/mongodb'
 import Email from '../model/email'
