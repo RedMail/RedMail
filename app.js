@@ -3,9 +3,10 @@ import server from './stmp-server'
 import parser from './middleware/mailparser'
 import concat from 'concat-stream'
 import emaildb from './model/email'
-import send  from './send'
+import send from './send'
+import config from './config/config'
 
-// TODO 创建stmp服务器
+// TODO::创建stmp服务器
 
 server.onAuth = (auth, session, callback) => {
   var username = 'nobey';
@@ -47,6 +48,8 @@ server.onRcptTo = (address, session, callback) => {
 server.onData = (stream, session, callback) => {
   stream.pipe(concat(async(mailData) => {
     const data = await parser(mailData)
+    const toAdd = data.to[0].address.splice('@')[1].toLocaleLowerCase()
+    const fromAdd = data.from[0].address.splice('@')[1].toLocaleLowerCase()
     emaildb.create({
       subject: data.subject,
       text: data.text,
@@ -57,9 +60,9 @@ server.onData = (stream, session, callback) => {
       toname: data.to[0].name
     })
 
-    await send(data.to[0].address, data)
-
-    console.log(data)
+    if (config.host.indexOf(fromAdd) !== -1 && config.host.indexOf(toAdd) === -1) {
+      await send(data.to[0].address, data)
+    }
 
   }));
 

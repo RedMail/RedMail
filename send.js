@@ -1,7 +1,6 @@
 import mailer from 'nodemailer'
 import direct from 'nodemailer-direct-transport'
 import mxparser from './middleware/mxparser'
-import config from './config/config'
 
 var isArray = function(obj) {
 return Object.prototype.toString.call(obj) === '[object Array]';
