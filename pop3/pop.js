@@ -1,4 +1,4 @@
-var server_name = "localhost"
+var server_name = "nobey.cn"
 import N3 from './n3'
 import '../bin/mongodb'
 import Email from '../model/email'
