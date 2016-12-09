@@ -1,11 +1,10 @@
-
 // see http://github.com/bnoordhuis/node-iconv for more info
-var Iconv = require('iconv-lite');
-var mime = {} ;
+var Iconv = require("iconv").Iconv;
+
 /* mime related functions - encoding/decoding etc*/
 /* TODO: Only UTF-8 and Latin1 are allowed with encodeQuotedPrintable */
 /* TODO: Check if the input string even needs encoding                */
-
+var mime = {}
 /**
  * mime.foldLine(str, maxLength, foldAnywhere) -> String
  * - str (String): mime string that might need folding
@@ -131,12 +130,12 @@ mime.decodeMimeWord = function(str){
  * Encodes a string into Quoted-printable format.
  **/
 mime.encodeQuotedPrintable = function(str, mimeWord, charset){
-    charset = charset || "UTF-8";
+    charset = charset || "UTF-8";
 
     /*
      * Characters from 33-126 OK (except for =; and ?_ when in mime word mode)
      * Spaces + tabs OK (except for line beginnings and endings)
-     * \n + \r OK
+     * \n + \r OK
      */
 
     str = str.replace(/[^\sa-zA-Z\d]/gm,function(c){
@@ -156,7 +155,7 @@ mime.encodeQuotedPrintable = function(str, mimeWord, charset){
         var lines = str.split(/\r?\n/);
         for(var i=0, len = lines.length; i<len; i++){
             if(lines[i].length>76){
-                lines[i] = this.foldLine(lines[i],76, false, true).replace(/\r\n/g,"=\r\n");
+                lines[i] = mime.foldLine(lines[i],76, false, true).replace(/\r\n/g,"=\r\n");
             }
         }
         str = lines.join("\r\n");
@@ -241,7 +240,7 @@ mime.decodeBase64 = function(str, charset){
  * - headers (String): header section of the e-mail
  *
  * Parses header lines into an array of objects (see [[parseHeaderLine]])
- * FIXME: This should probably not be here but in "envelope" instead
+ * FIXME: mime should probably not be here but in "envelope" instead
  **/
 mime.parseHeaders = function(headers){
     var text, lines, line, i, name, value, cmd, header_lines = {};
@@ -344,12 +343,9 @@ function lineEdges(str){
  * Converts a buffer in <charset> codepage into UTF-8 string
  **/
 function fromCharset(charset, buffer, keep_buffer){
-    // var iconv = new Iconv(charset,),
-    //     buffer = iconv.convert(buffer);
-        var buffer = Iconv.encode(charset, 'UTF-8');
-
- return keep_buffer?buffer:Iconv.decode(buffer, 'UTF-8');
-    // return keep_buffer?buffer:buffer.toString("utf-8");
+    var iconv = new Iconv(charset,'UTF-8'),
+        buffer = iconv.convert(buffer);
+    return keep_buffer?buffer:buffer.toString("utf-8");
 }
 
 /**
@@ -360,8 +356,8 @@ function fromCharset(charset, buffer, keep_buffer){
  * Converts a string or buffer to <charset> codepage
  **/
 function toCharset(charset, buffer){
-    return Iconv.encode(buffer, 'UTF-8');
-    // return iconv.convert(buffer);
+    var iconv = new Iconv('UTF-8',charset);
+    return iconv.convert(buffer);
 }
 
 /**

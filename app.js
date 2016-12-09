@@ -1,4 +1,3 @@
-import smtp from 'smtp-protocol'
 import server from './stmp-server'
 import parser from './middleware/mailparser'
 import concat from 'concat-stream'

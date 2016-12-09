@@ -1,7 +1,7 @@
 
 // see http://github.com/bnoordhuis/node-iconv for more info
 var Iconv = require('iconv-lite');
-var mime = {} ;
+var mime = {}
 /* mime related functions - encoding/decoding etc*/
 /* TODO: Only UTF-8 and Latin1 are allowed with encodeQuotedPrintable */
 /* TODO: Check if the input string even needs encoding                */
@@ -156,7 +156,7 @@ mime.encodeQuotedPrintable = function(str, mimeWord, charset){
         var lines = str.split(/\r?\n/);
         for(var i=0, len = lines.length; i<len; i++){
             if(lines[i].length>76){
-                lines[i] = this.foldLine(lines[i],76, false, true).replace(/\r\n/g,"=\r\n");
+                lines[i] = mime.foldLine(lines[i],76, false, true).replace(/\r\n/g,"=\r\n");
             }
         }
         str = lines.join("\r\n");
@@ -389,4 +389,5 @@ function decodeBytestreamUrlencoding(encoded_string){
     }
     return buffer;
 }
+
 export default mime;
