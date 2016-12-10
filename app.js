@@ -1,4 +1,4 @@
-import server from './stmp-server'
+import server from './smtp-server'
 import parser from './middleware/mailparser'
 import concat from 'concat-stream'
 import emaildb from './model/email'
