@@ -49,7 +49,7 @@ server.onData = (stream, session, callback) => {
     const data = await parser(mailData)
     const toAdd = data.to[0].address.splice('@')[1].toLocaleLowerCase()
     const fromAdd = data.from[0].address.splice('@')[1].toLocaleLowerCase()
-    emaildb.create({
+    await emaildb.create({
       subject: data.subject,
       text: data.text,
       html: data.html,
