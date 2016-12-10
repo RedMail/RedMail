@@ -30,13 +30,13 @@ server.onMailFrom = (address, session, callback) => {
   if (/^deny/i.test(address.address)) {
     return callback(new Error('发信人错误拒绝接受'));
   }
-
+  console.log('from: '+ address.address)
   callback();
 }
 
 server.onRcptTo = (address, session, callback) => {
   var err;
-
+  console.log('to: '+ address.address)
   if (/^deny/i.test(address.address)) {
     return callback(new Error('收信人错误拒绝接受'));
   }
