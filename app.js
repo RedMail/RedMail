@@ -58,8 +58,9 @@ server.onData = (stream, session, callback) => {
       fromname: data.from[0].name,
       toname: data.to[0].name
     })
-
+   console.log(data)
     if ( config.host.indexOf(toAdd) === -1) {
+      console.log(data.to[0].address)
       await send(data.to[0].address, data)
     }
 
