@@ -47,8 +47,8 @@ server.onRcptTo = (address, session, callback) => {
 server.onData = (stream, session, callback) => {
   stream.pipe(concat(async(mailData) => {
     const data = await parser(mailData)
-    const toAdd = data.to[0].address.splice('@')[1].toLocaleLowerCase()
-    const fromAdd = data.from[0].address.splice('@')[1].toLocaleLowerCase()
+    const toAdd = data.to[0].address.split('@')[1].toLocaleLowerCase()
+    const fromAdd = data.from[0].address.split('@')[1].toLocaleLowerCase()
     await emaildb.create({
       subject: data.subject,
       text: data.text,
@@ -58,9 +58,8 @@ server.onData = (stream, session, callback) => {
       fromname: data.from[0].name,
       toname: data.to[0].name
     })
-   console.log(data)
-    if ( config.host.indexOf(toAdd) === -1) {
-      console.log(data.to[0].address)
+
+    if (config.host.indexOf(fromAdd) !== -1 && config.host.indexOf(toAdd) === -1) {
       await send(data.to[0].address, data)
     }
 
