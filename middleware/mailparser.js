@@ -6,7 +6,6 @@ export default (mail) => {
   mailparser.end()
   return new Promise((resolve, reject) => {
     mailparser.on("end", (mail_object) => {
-      console.log(mail_object)
       resolve(mail_object)
     })
   })
