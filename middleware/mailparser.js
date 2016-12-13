@@ -2,7 +2,6 @@ import { MailParser } from 'mailparser'
 
 export default (mail) => {
   const mailparser = new MailParser()
-  console.log(mail.toString())
   mailparser.write(mail)
   mailparser.end()
   return new Promise((resolve, reject) => {
