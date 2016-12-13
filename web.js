@@ -3,7 +3,7 @@ var app = express();
 var cors = require('cors')
 var bodyParser = require('body-parser');
 // var multer = require('multer');
-import './bin/mongodb.js'
+// import './bin/mongodb.js'
 import emaildb from './model/email'
 import send from './send'
 app.use(cors());
