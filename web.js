@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 var cors = require('cors')
 var bodyParser = require('body-parser');
-var multer = require('multer');
+// var multer = require('multer');
+import './bin/mongodb.js'
 import emaildb from './model/email'
 import send from './send'
 app.use(cors());
@@ -11,7 +12,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({
   extended: true
 })); // for parsing application/x-www-form-urlencoded
-app.use(multer()); // for parsing multipart/form-data
+// app.use(multer()); // for parsing multipart/form-data
 
 app.get('/', function(req, res) {
   res.send('RedMail api');
@@ -36,10 +37,12 @@ app.post('/send', async(req, res) => {
     text: text,
     subject: subject,
     from: [{
-      address: from
+      address: from,
+      name:''
     }],
     to: [{
-      address: to
+      address: to,
+      name:''
     }]
   }
 

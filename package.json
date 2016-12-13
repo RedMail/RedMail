@@ -19,7 +19,6 @@
     "mailparser": "^0.6.1",
     "moment": "^2.16.0",
     "mongoose": "^4.6.8",
-    "multer": "^1.2.0",
     "native-dns": "^0.7.0",
     "nodemailer": "^2.6.4",
     "nodemailer-direct-transport": "^3.3.2",
