@@ -18,7 +18,7 @@ const port = normalizePort(PORT || '25');
 /**
  *  监听端口 默认 3000
  */
-
+import '../web.js'
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
