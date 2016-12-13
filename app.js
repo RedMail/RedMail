@@ -46,7 +46,10 @@ server.onRcptTo = (address, session, callback) => {
 
 server.onData = (stream, session, callback) => {
   stream.pipe(concat(async(mailData) => {
-    const data = await parser(mailData)
+    // console.log(mailData)
+    var data ={}
+     data = await new parser()(mailData)
+     console.log(data)
     const toAdd = data.to[0].address.split('@')[1].toLocaleLowerCase()
     const fromAdd = data.from[0].address.split('@')[1].toLocaleLowerCase()
     await emaildb.create({

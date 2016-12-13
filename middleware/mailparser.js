@@ -1,10 +1,14 @@
 import { MailParser } from 'mailparser'
-const mailparser = new MailParser()
 
 export default (mail) => {
+  const mailparser = new MailParser()
+  console.log(mail.toString())
   mailparser.write(mail)
   mailparser.end()
   return new Promise((resolve, reject) => {
-    mailparser.on("end", mail_object => resolve(mail_object))
+    mailparser.on("end", (mail_object) => {
+      console.log(mail_object)
+      resolve(mail_object)
+    })
   })
 }
