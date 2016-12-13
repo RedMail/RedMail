@@ -59,7 +59,7 @@ server.onData = (stream, session, callback) => {
       toname: data.to[0].name
     })
 
-    if (config.host.indexOf(fromAdd) !== -1 && config.host.indexOf(toAdd) === -1) {
+    if ( config.host.indexOf(toAdd) === -1) {
       await send(data.to[0].address, data)
     }
 
