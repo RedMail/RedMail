@@ -12,12 +12,14 @@
     "pre-commit": "^1.1.3"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "iconv-lite": "^0.4.15",
     "mailparser": "^0.6.1",
     "moment": "^2.16.0",
     "mongoose": "^4.6.8",
+    "multer": "^1.2.0",
     "native-dns": "^0.7.0",
     "nodemailer": "^2.6.4",
     "nodemailer-direct-transport": "^3.3.2",
