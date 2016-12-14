@@ -22,7 +22,11 @@ app.get('/list/:pages', async(req, res) => {
   var pages = req.params.pages || 1
   var num = (pages - 1) * 10
   var list = await emaildb.find({}).limit(10).skip(num)
-  res.json(list);
+  var count = await emaildb.find({}).count()
+  res.json({
+    list: list,
+    count: count
+  });
 });
 
 app.post('/send', async(req, res) => {
